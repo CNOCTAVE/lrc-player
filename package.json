@@ -1,0 +1,26 @@
+{
+  "name": "lrc-player",
+  "version": "1.0.0",
+  "description": "play lrc file in browser",
+  "main": "lrc-player.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CNOCTAVE/lrc-player.git"
+  },
+  "keywords": [
+    "LRC",
+    "player"
+  ],
+  "author": "CNOCTAVE, Yu Hongbo",
+  "license": "AGPL-3.0-only",
+  "bugs": {
+    "url": "https://github.com/CNOCTAVE/lrc-player/issues"
+  },
+  "homepage": "https://github.com/CNOCTAVE/lrc-player#readme"
+}
