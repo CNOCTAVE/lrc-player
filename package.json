@@ -1,5 +1,5 @@
 {
-  "name": "lrc-player",
+  "name": "@yuhongbo1/lrc-player",
   "version": "1.0.0",
   "description": "play lrc file in browser",
   "main": "lrc-player.js",
