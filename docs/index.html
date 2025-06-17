@@ -151,15 +151,15 @@ without any warranty.
                         <q-separator></q-separator>
                         <div id="cdn" class="title1 q-ma-md text-primary">CDN引入方式</div>
                         <div class="text-h5 q-ma-md text-red-10">必须引入lrc-player.js</div>
-                        <p class="q-ma-md">&lt;script src="https://unpkg.com/@yuhongbo1/lrc-player@1.0.0/lrc-player.js">&lt;/script></p>
+                        <p class="q-ma-md">&lt;script src="https://unpkg.com/@yuhongbo1/lrc-player@1.1.0/lrc-player.js">&lt;/script></p>
                         <div class="text-h5 q-ma-md text-red-10">可选引入lrc-player.css</div>
-                        <p class="q-ma-md">&lt;link rel="stylesheet" href="https://unpkg.com/@yuhongbo1/lrc-player@1.0.0/lrc-player.css"></p>
+                        <p class="q-ma-md">&lt;link rel="stylesheet" href="https://unpkg.com/@yuhongbo1/lrc-player@1.1.0/lrc-player.css"></p>
                         <q-separator></q-separator>
                         <div id="npm" class="title1 q-ma-md text-primary">NPM安装</div>
                         <p class="q-ma-md">$ npm install @yuhongbo1/lrc-player</p>
                         <q-separator></q-separator>
                         <div id="how_to_use" class="title1 q-ma-md text-primary">如何使用</div>
-                        <div class="text-h5 q-ma-md text-red-10">初始化LRC文件</div>
+                        <div class="text-h5 q-ma-md text-red-10">初始化LRC文件，生成与LRC文件相关的所有div</div>
                         <p class="q-ma-md">const player = LrcPlayer.init(lrcText);</p>
                         <div class="text-h5 q-ma-md text-red-10">播放LRC文件</div>
                         <p class="q-ma-md">player.play();</p>
@@ -167,6 +167,8 @@ without any warranty.
                         <p class="q-ma-md">player.pause();</p>
                         <div class="text-h5 q-ma-md text-red-10">继续播放LRC文件</div>
                         <p class="q-ma-md">player.resume();</p>
+                        <div class="text-h5 q-ma-md text-red-10">删除与LRC文件相关的所有div，重置LRC文件播放状态</div>
+                        <p class="q-ma-md">player.destroy();</p>
                         <q-separator></q-separator>
                         <div id="live_demo" class="title1 q-ma-md text-primary">在线演示</div>
                         <div class="text-h5 q-ma-md text-red-10">仅使用lrc-player.js，而不使用lrc-player.css</div>

@@ -181,6 +181,26 @@
             }
             return this.lines[this.lines.length - 1] || null;
         }
+
+        /**
+         * 销毁播放器实例，移除所有创建的DOM元素
+         */
+        destroy() {
+            // 停止动画
+            cancelAnimationFrame(this.animationFrameId);
+            
+            // 移除DOM元素
+            const container = document.getElementById(this.containerId);
+            if (container) {
+                container.remove();
+            }
+            
+            // 重置状态
+            this.isPlaying = false;
+            this.animationFrameId = null;
+            this.startTime = 0;
+            this.lyricsWrapper = null;
+        }
     }
 
     return LrcPlayer;
