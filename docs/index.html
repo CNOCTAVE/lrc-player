@@ -151,9 +151,9 @@ without any warranty.
                         <q-separator></q-separator>
                         <div id="cdn" class="title1 q-ma-md text-primary">CDN引入方式</div>
                         <div class="text-h5 q-ma-md text-red-10">必须引入lrc-player.js</div>
-                        <p class="q-ma-md">&lt;script src="https://unpkg.com/@yuhongbo1/lrc-player@1.1.0/lrc-player.js">&lt;/script></p>
+                        <p class="q-ma-md">&lt;script src="https://unpkg.com/@yuhongbo1/lrc-player@2.0.0/lrc-player.js">&lt;/script></p>
                         <div class="text-h5 q-ma-md text-red-10">可选引入lrc-player.css</div>
-                        <p class="q-ma-md">&lt;link rel="stylesheet" href="https://unpkg.com/@yuhongbo1/lrc-player@1.1.0/lrc-player.css"></p>
+                        <p class="q-ma-md">&lt;link rel="stylesheet" href="https://unpkg.com/@yuhongbo1/lrc-player@2.0.0/lrc-player.css"></p>
                         <q-separator></q-separator>
                         <div id="npm" class="title1 q-ma-md text-primary">NPM安装</div>
                         <p class="q-ma-md">$ npm install @yuhongbo1/lrc-player</p>
@@ -167,8 +167,14 @@ without any warranty.
                         <p class="q-ma-md">player.pause();</p>
                         <div class="text-h5 q-ma-md text-red-10">继续播放LRC文件</div>
                         <p class="q-ma-md">player.resume();</p>
+                        <div class="text-h5 q-ma-md text-red-10">重新播放LRC文件</div>
+                        <p class="q-ma-md">player.replay();</p>
                         <div class="text-h5 q-ma-md text-red-10">删除与LRC文件相关的所有div，重置LRC文件播放状态</div>
                         <p class="q-ma-md">player.destroy();</p>
+                        <div class="text-h5 q-ma-md text-red-10">设置LRC文件播放进度（秒）</div>
+                        <p class="q-ma-md">player.setTimeSecond(seconds);</p>
+                        <div class="text-h5 q-ma-md text-red-10">设置LRC文件播放进度（毫秒）</div>
+                        <p class="q-ma-md">player.setTimeMillisecond(milliseconds);</p>
                         <q-separator></q-separator>
                         <div id="live_demo" class="title1 q-ma-md text-primary">在线演示</div>
                         <div class="text-h5 q-ma-md text-red-10">仅使用lrc-player.js，而不使用lrc-player.css</div>
@@ -204,6 +210,17 @@ without any warranty.
                             url = {https://cnoctave.github.io/lrc-player/index.html},
                             urldate = {2025-06-16},
                           }</p>
+                        <div class="text-h5 q-ma-md text-red-10">Exploring the Functionality and Applications of lrc-player: A Browser-Based LRC File Player(BibTeX)</div>
+                        <p class="q-ma-md">@article{https://doi.org/10.31224/4702, 
+                            doi = {10.31224/4702}, 
+                            url = {https://engrxiv.org/preprint/view/4702}, 
+                            author = {Yu Hongbo, }, 
+                            keywords = {CNOCTAVE, Windows, Linux, open-source, Electron}, 
+                            title = {Exploring the Functionality and Applications of lrc-player: A Browser-Based LRC File Player}, 
+                            publisher = {engrxiv}, 
+                            year = {2025}, 
+                            copyright = {Creative Commons Attribution 4.0 International} 
+                            }</p>
                     </div>
                 </div>
                 <q-toolbar class="bg-grey-8 text-white q-my-md shadow-2">

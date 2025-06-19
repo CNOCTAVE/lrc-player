@@ -50,6 +50,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>. -->
         <button id="playBtn">播放</button>
         <button id="pauseBtn">暂停</button>
         <button id="resumeBtn">继续</button>
+        <button id="setTimeSecond">设置为20秒</button>
     </div>
 
     <script>
@@ -113,6 +114,10 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>. -->
         
         document.getElementById('resumeBtn').addEventListener('click', () => {
             player.resume();
+        });
+        
+        document.getElementById('setTimeSecond').addEventListener('click', () => {
+            player.setTimeSecond(10);
         });
     </script>
 </body>

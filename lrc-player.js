@@ -133,11 +133,6 @@
         }
 
         _updateLyricsPosition() {
-            if (!this.isPlaying) {
-                cancelAnimationFrame(this.animationFrameId);
-                return;
-            }
-
             const elapsed = (performance.now() - this.startTime) / 1000; // 转换为秒
             const currentLine = this._getCurrentLine(elapsed);
             
@@ -200,6 +195,46 @@
             this.animationFrameId = null;
             this.startTime = 0;
             this.lyricsWrapper = null;
+        }
+
+        /**
+         * 设置当前播放时间（秒级精度）
+         * @param {number} seconds - 要设置的播放时间（秒）
+         */
+        setTimeSecond(seconds) {
+            this.startTime = performance.now() - (seconds * 1000);
+            this.pausedTime = (performance.now() - this.startTime) / 1000; // 转换为秒
+            if (this.isPlaying) {
+                cancelAnimationFrame(this.animationFrameId);
+                this._updateLyricsPosition();
+            } else {
+                this._updateLyricsPosition();
+                cancelAnimationFrame(this.animationFrameId);
+            }
+        }
+
+        /**
+         * 设置当前播放时间（毫秒级精度）
+         * @param {number} milliseconds - 要设置的播放时间（毫秒）
+         */
+        setTimeMillisecond(milliseconds) {
+            this.startTime = performance.now() - milliseconds;
+            this.pausedTime = (performance.now() - this.startTime) / 1000; // 转换为秒
+            if (this.isPlaying) {
+                cancelAnimationFrame(this.animationFrameId);
+                this._updateLyricsPosition();
+            } else {
+                this._updateLyricsPosition();
+                cancelAnimationFrame(this.animationFrameId);
+            }
+        }
+
+        /**
+         * 从头开始重新播放歌词
+         */
+        replay() {
+            this.pause();
+            this.play();
         }
     }
 
